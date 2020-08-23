@@ -9,6 +9,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 export class EmployeesComponent implements OnInit {
 
   employees :any;
+  employeeName: string="";
 
   constructor(private http: HttpClient) { }
 

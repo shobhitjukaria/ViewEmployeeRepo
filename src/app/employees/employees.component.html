@@ -13,6 +13,11 @@
 
 <div class="container">
   <h2>All Employees</h2>
+
+    <div class="form-group">
+      <label for="usr">Search By First Name:</label>
+      <input type="text" class="form-control" id="usr" [(ngModel)]= "employeeName" placeholder="Search by First Name">
+    </div>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -28,7 +33,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor= "let employee of employees">
+      <tr *ngFor= "let employee of employees | filterName: employeeName">
+
         <td>{{employee.f_name}}</td>
         <td>{{employee.l_name}}</td>
         <td>{{employee.company}}</td>
@@ -41,6 +47,10 @@
 
     </tbody>
   </table>
+
+  <ul class="pagination justify-content-end" style="margin:20px 0">
+    <li class="page-item">...</li>
+  </ul>
 </div>
 
 </body>
