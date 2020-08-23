@@ -33,8 +33,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor= "let employee of employees | filterName: employeeName">
-
+      <tr *ngFor= "let employee of employees | filterName: employeeName | paginate: { itemsPerPage: 5, currentPage: page};">
         <td>{{employee.f_name}}</td>
         <td>{{employee.l_name}}</td>
         <td>{{employee.company}}</td>
@@ -46,11 +45,11 @@
       </tr>
 
     </tbody>
+    <div>
+    <pagination-controls style=" display: flex; justify-content: center; padding-left: 0; text-justify: auto;" maxSize="50"  responsive=""directionLinks="true"  autoHide="true" previousLabel="" nextLabel="" (pageChange)= "page = $event">/</pagination-controls>
+    </div>
   </table>
 
-  <ul class="pagination justify-content-end" style="margin:20px 0">
-    <li class="page-item">...</li>
-  </ul>
 </div>
 
 </body>

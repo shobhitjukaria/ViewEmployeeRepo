@@ -10,6 +10,7 @@ export class EmployeesComponent implements OnInit {
 
   employees :any;
   employeeName: string="";
+  page: number=1;
 
   constructor(private http: HttpClient) { }
 
