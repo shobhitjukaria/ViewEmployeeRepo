@@ -15,33 +15,24 @@
   <h2>All Employees</h2>
 
     <div class="form-group">
-      <label for="usr">Search By First Name:</label>
+
       <input type="text" class="form-control" id="usr" [(ngModel)]= "employeeName" placeholder="Search by First Name">
     </div>
   <table class="table table-hover">
     <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Company</th>
-        <th>City</th>
-        <th>State</th>
-        <th>Zip</th>
-        <th>Web</th>
-        <th>Age</th>
-
-      </tr>
+      <tr >
+        <th *ngFor= "let col of displayedColumns "><a class="link" (click)= "sortedColumn = col">{{ col }}</a></th>
     </thead>
     <tbody>
-      <tr *ngFor= "let employee of employees | filterName: employeeName | paginate: { itemsPerPage: 5, currentPage: page};">
-        <td>{{employee.f_name}}</td>
-        <td>{{employee.l_name}}</td>
-        <td>{{employee.company}}</td>
-        <td>{{employee.city}}</td>
-        <td>{{employee.state}}</td>
-        <td>{{employee.zip}}</td>
-        <td>{{employee.web}}</td>
-        <td>{{employee.age}}</td>
+      <tr *ngFor= "let employee of employees| filterName: employeeName| sort : sortedColumn | paginate: { itemsPerPage: 5, currentPage: page};">
+      <ng-container> <td>{{employee.f_name}}</td></ng-container>
+      <ng-container> <td>{{employee.l_name}}</td></ng-container>
+      <ng-container> <td>{{employee.company}}</td></ng-container>
+      <ng-container> <td>{{employee.city}}</td></ng-container>
+      <ng-container> <td>{{employee.state}}</td></ng-container>
+      <ng-container> <td>{{employee.zip}}</td></ng-container>
+      <ng-container> <td>{{employee.web}}</td></ng-container>
+      <ng-container> <td>{{employee.age}}</td></ng-container>
       </tr>
 
     </tbody>

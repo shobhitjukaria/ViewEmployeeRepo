@@ -7,12 +7,14 @@ import { EmployeesComponent } from './employees/employees.component';
 import { FilterNamePipe } from './filter-name.pipe';
 import { FormsModule} from '@angular/forms'
 import { NgxPaginationModule} from 'ngx-pagination';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
-    FilterNamePipe
+    FilterNamePipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,

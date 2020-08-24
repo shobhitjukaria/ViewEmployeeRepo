@@ -7,10 +7,12 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
   styleUrls: ['./employees.component.css']
 })
 export class EmployeesComponent implements OnInit {
-
+  displayedColumns = ['f_name','l_name','company','city','state','zip','web','age'];
   employees :any;
   employeeName: string="";
   page: number=1;
+  sortedColumn: string;
+  a:number = 0;
 
   constructor(private http: HttpClient) { }
 
