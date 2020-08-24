@@ -13,14 +13,14 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container bg-info">
 
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <!-- Brand -->
   <a class="navbar-brand" href="#">Employee Data</a>
 
   <!-- Toggler/collapsibe Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -44,13 +44,12 @@
     <div class="form-group">
       <input type="text" class="form-control" id="usr" [(ngModel)]= "employeeName" placeholder="Search by First Name">
     </div>
-  <table class="table table-hover table-bordered table-light form-group ">
+  <table class="table table-hover table-light  form-group ">
     <thead>
       <tr >
         <th *ngFor= "let col of displayedColumns ">
-        <a class="contribute cap" (click)= "sortedColumn = col" (click)= "a=a+1" href="#"><i class="fas fa-sort">
+        <a class="contribute cap text-primary" (click)= "sortedColumn = col" (click)= "a=a+1" href="#"><i class="fas fa-sort">
         <span class="sp"></span>
-        
         {{ col }}</i></a>
         </th>
     </thead>
@@ -67,10 +66,10 @@
       </tr>
   </tbody>
   <div class="gp">
-  <pagination-controls  maxSize="10"  responsive="true" directionLinks="true"  autoHide="true" previousLabel="" nextLabel="" (pageChange)= "page = $event">/</pagination-controls>
+  <pagination-controls  maxSize="11"  responsive="true" directionLinks="true"  autoHide="true" previousLabel="" nextLabel="" (pageChange)= "page = $event">/</pagination-controls>
   </div>
   </table>
-
+<span class="ext"></span>
 </div>
 
 </body>

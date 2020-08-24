@@ -18,3 +18,8 @@ span.sp{
 div.gp{
     margin-top :25px;
 }
+
+span.ext{
+    margin: 5px;
+    padding: 5px;
+}
