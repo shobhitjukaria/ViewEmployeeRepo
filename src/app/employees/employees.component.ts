@@ -12,7 +12,7 @@ export class EmployeesComponent implements OnInit {
   employeeName: string="";
   page: number=1;
   sortedColumn: string;
-  a:number = 0;
+  a:number=0;
 
   constructor(private http: HttpClient) { }
 

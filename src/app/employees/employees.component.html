@@ -21,10 +21,10 @@
   <table class="table table-hover">
     <thead>
       <tr >
-        <th *ngFor= "let col of displayedColumns "><a class="link" (click)= "sortedColumn = col">{{ col }}</a></th>
+        <th *ngFor= "let col of displayedColumns "><a class="link" (click)= "sortedColumn = col" (click)= "a=a+1">{{ col }}</a></th>
     </thead>
     <tbody>
-      <tr *ngFor= "let employee of employees| filterName: employeeName| sort : sortedColumn | paginate: { itemsPerPage: 5, currentPage: page};">
+      <tr *ngFor= "let employee of employees| filterName: employeeName| sort : sortedColumn : a | paginate: { itemsPerPage: 5, currentPage: page};">
       <ng-container> <td>{{employee.f_name}}</td></ng-container>
       <ng-container> <td>{{employee.l_name}}</td></ng-container>
       <ng-container> <td>{{employee.company}}</td></ng-container>
