@@ -2,3 +2,19 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
+.spc{
+    margin : 10px;
+}
+
+a.cap{
+    text-transform : capitalize;
+}
+
+span.sp{
+    padding-right : 2px;
+}
+
+div.gp{
+    margin-top :25px;
+}
